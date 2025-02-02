@@ -5,60 +5,221 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Viplav Ray - Portfolio</title>
     <style>
+        /* General Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            text-align: center;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
         }
+
+        /* Header */
         header {
             background-color: #333;
             color: white;
-            padding: 20px;  
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
         }
+
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #007BFF;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            margin: 10px 0 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            margin: 10px 0 0;
+            font-size: 1.2rem;
+            color: #f4f4f9;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #444;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #007BFF;
+        }
+
+        /* Sections */
         section {
-            padding: 20px;
+            padding: 40px 20px;
         }
+
         .container {
             max-width: 800px;
             margin: auto;
             background: white;
-            padding: 20px;
+            padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
+
+        h2 {
+            color: #007BFF;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            background: #f4f4f9;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        ul li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Contact Section */
         .contact a {
             text-decoration: none;
             color: #007BFF;
+            transition: color 0.3s ease;
+        }
+
+        .contact a:hover {
+            color: #0056b3;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            .profile-picture {
+                width: 120px;
+                height: 120px;
+            }
+
+            nav a {
+                font-size: 0.9rem;
+                margin: 0 10px;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Header -->
     <header>
+        <img src="logo.png" alt="Viplav Ray" class="profile-picture">
         <h1>Viplav Ray</h1>
         <p>Data Scientist | AI Enthusiast | Problem Solver</p>
     </header>
-    <section class="container">
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- About Me Section -->
+    <section id="about" class="container">
         <h2>About Me</h2>
-        <p>Hi! I'm Viplav Ray, a passionate data scientist with a keen interest in AI, machine learning, and data-driven solutions.</p>
+        <p>Hi! I'm Viplav Ray, a passionate data scientist with a keen interest in AI, machine learning, and data-driven solutions. I love turning complex data into actionable insights and building intelligent systems that solve real-world problems.</p>
     </section>
-    <section class="container">
+
+    <!-- Skills Section -->
+    <section id="skills" class="container">
         <h2>Skills</h2>
-        <p>Python, Machine Learning, Deep Learning, Data Visualization, SQL, Big Data</p>
-    </section>
-    <section class="container">
-        <h2>Projects</h2>
+        <p>Here are some of the skills I specialize in:</p>
         <ul>
-            <li>Project 1: AI-based recommendation system</li>
-            <li>Project 2: Sentiment analysis on social media</li>
-            <li>Project 3: Predictive analytics for business insights</li>
+            <li>Python</li>
+            <li>Machine Learning</li>
+            <li>Deep Learning</li>
+            <li>Data Visualization</li>
+            <li>SQL</li>
+            <li>Big Data</li>
         </ul>
     </section>
-    <section class="container contact">
+
+    <!-- Projects Section -->
+    <section id="projects" class="container">
+        <h2>Projects</h2>
+        <ul>
+            <li><strong>AI-based Recommendation System:</strong> Built a personalized recommendation engine using collaborative filtering and deep learning.</li>
+            <li><strong>Sentiment Analysis on Social Media:</strong> Developed a model to analyze and classify sentiments from Twitter data.</li>
+            <li><strong>Predictive Analytics for Business Insights:</strong> Created a predictive model to forecast sales and optimize inventory.</li>
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container contact">
         <h2>Contact</h2>
+        <p>Feel free to reach out to me for collaborations or just to say hi!</p>
         <p>Email: <a href="mailto:viplav@example.com">viplav@example.com</a></p>
         <p>LinkedIn: <a href="https://linkedin.com/in/viplavray" target="_blank">linkedin.com/in/viplavray</a></p>
     </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Viplav Ray. All rights reserved.</p>
+    </footer>
 </body>
 </html>
